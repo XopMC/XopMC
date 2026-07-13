@@ -62,8 +62,11 @@
 ## GitHub activity
 
 <p align="center">
-  <img src="assets/stats.svg" alt="Live GitHub profile statistics" width="49%">
-  <img src="assets/languages.svg" alt="Commits grouped by repository primary language" width="49%">
+  <img src="assets/stats.svg" alt="Live GitHub profile statistics" width="100%">
+</p>
+
+<p align="center">
+  <img src="assets/languages.svg" alt="Commits grouped by repository primary language" width="100%">
 </p>
 
 <p align="center">
