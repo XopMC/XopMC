@@ -73,14 +73,14 @@
 </p>
 
 <p align="center">
-  <img src="assets/languages.svg" alt="Commits grouped by repository primary language" width="100%">
+  <img src="assets/languages.svg" alt="Public repositories grouped by primary language" width="100%">
 </p>
 
 <p align="center">
   <img src="assets/activity.svg" alt="Contribution activity during the last twelve months" width="100%">
 </p>
 
-<sub>Language totals group commits by each repository's primary language. Cards are generated from public GitHub data and updated daily.</sub>
+<sub>Language totals group public repositories by their primary GitHub language. Cards are generated from public GitHub data and updated daily.</sub>
 
 ## Contact & support
 

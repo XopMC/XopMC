@@ -42,6 +42,15 @@ LANGUAGE_LABELS = {
     "Objective-C++": "Obj-C++",
 }
 
+PROFILE_LANGUAGES = (
+    "C++",
+    "C",
+    "C#",
+    "Python",
+    "Cuda",
+    "Objective-C++",
+)
+
 FEATURED_PROJECTS = (
     "METAL_CRYPTO_TOOLKIT",
     "C-Sharp-Mnemonic",
@@ -64,6 +73,10 @@ query ProfileCards($login: String!, $from: DateTime!, $to: DateTime!) {
       nodes {
         name
         stargazerCount
+        primaryLanguage {
+          name
+          color
+        }
       }
     }
     contributionsCollection(from: $from, to: $to) {
@@ -75,17 +88,6 @@ query ProfileCards($login: String!, $from: DateTime!, $to: DateTime!) {
             date
             weekday
           }
-        }
-      }
-      commitContributionsByRepository(maxRepositories: 100) {
-        repository {
-          primaryLanguage {
-            name
-            color
-          }
-        }
-        contributions(first: 100) {
-          totalCount
         }
       }
     }
@@ -198,29 +200,26 @@ def render_star_badges(user: dict) -> None:
 def language_totals(user: dict) -> list[tuple[str, int, str]]:
     totals: dict[str, int] = defaultdict(int)
     api_colors: dict[str, str] = {}
-    entries = user["contributionsCollection"]["commitContributionsByRepository"]
-    for entry in entries:
-        language = entry["repository"].get("primaryLanguage")
-        count = entry["contributions"]["totalCount"]
-        if not language or count <= 0:
+    for repository in user["repositories"]["nodes"]:
+        language = repository.get("primaryLanguage")
+        if not language:
             continue
         name = language["name"]
-        totals[name] += count
+        totals[name] += 1
         if language.get("color"):
             api_colors[name] = language["color"]
 
-    ranked = sorted(totals.items(), key=lambda item: (-item[1], item[0].lower()))[:7]
     return [
-        (name, count, LANGUAGE_COLORS.get(name, api_colors.get(name, GREEN)))
-        for name, count in ranked
+        (name, totals[name], LANGUAGE_COLORS.get(name, api_colors.get(name, GREEN)))
+        for name in PROFILE_LANGUAGES
     ]
 
 
 def render_languages(user: dict) -> None:
     languages = language_totals(user)
-    lines = svg_start(780, 270, "Commits grouped by repository primary language")
-    lines.append(f'<text x="34" y="43" fill="{GREEN}" font-size="24" font-weight="700">Languages by commit</text>')
-    lines.append(f'<text x="746" y="42" fill="{MUTED}" font-size="12" text-anchor="end" class="mono">PUBLIC / 12 MONTHS</text>')
+    lines = svg_start(780, 270, "Public repositories grouped by primary language")
+    lines.append(f'<text x="34" y="43" fill="{GREEN}" font-size="24" font-weight="700">Languages by repository</text>')
+    lines.append(f'<text x="746" y="42" fill="{MUTED}" font-size="12" text-anchor="end" class="mono">PUBLIC / CURRENT</text>')
 
     if not languages:
         lines.append(f'<text x="390" y="145" fill="{MUTED}" font-size="16" text-anchor="middle">No public commit data</text>')
@@ -246,7 +245,7 @@ def render_languages(user: dict) -> None:
         lines.append(f'<text x="{center:.1f}" y="{y - 7}" fill="{TEXT}" font-size="11" text-anchor="middle" class="mono">{format_count(count)}</text>')
         lines.append(f'<text x="{center:.1f}" y="{chart_top + chart_height + 22}" fill="{MUTED}" font-size="11" text-anchor="middle" class="mono">{escape(label)}</text>')
 
-    lines.append(f'<text x="390" y="248" fill="{MUTED}" font-size="11" text-anchor="middle">Commits grouped by repository primary language</text>')
+    lines.append(f'<text x="390" y="248" fill="{MUTED}" font-size="11" text-anchor="middle">Public repositories grouped by primary language</text>')
     write_svg("languages.svg", lines)
 
 
