@@ -42,6 +42,19 @@ LANGUAGE_LABELS = {
     "Objective-C++": "Obj-C++",
 }
 
+FEATURED_PROJECTS = (
+    "METAL_CRYPTO_TOOLKIT",
+    "C-Sharp-Mnemonic",
+    "Mnemonic_CPP",
+    "CUDA_Mnemonic_Recovery",
+    "XorFilter",
+    "TONc",
+    "Metal_Mnemonic_Recovery",
+    "keyhunt-win",
+    "brainflayer-MultiBlooms",
+    "brainflayer-CUDA",
+)
+
 QUERY = """
 query ProfileCards($login: String!, $from: DateTime!, $to: DateTime!) {
   user(login: $login) {
@@ -49,6 +62,7 @@ query ProfileCards($login: String!, $from: DateTime!, $to: DateTime!) {
     repositories(first: 100, privacy: PUBLIC, ownerAffiliations: OWNER) {
       totalCount
       nodes {
+        name
         stargazerCount
       }
     }
@@ -151,6 +165,34 @@ def render_stats(user: dict) -> None:
         lines.append(f'<text x="{x + 18}" y="{y + 27}" fill="{MUTED}" font-size="12" font-weight="600" class="mono">{label}</text>')
         lines.append(f'<text x="{x + 18}" y="{y + 56}" fill="{TEXT}" font-size="27" font-weight="700">{format_count(value)}</text>')
     write_svg("stats.svg", lines)
+
+
+def render_star_badges(user: dict) -> None:
+    counts = {
+        repository["name"]: repository["stargazerCount"]
+        for repository in user["repositories"]["nodes"]
+    }
+    badge_dir = ASSETS / "stars"
+    badge_dir.mkdir(parents=True, exist_ok=True)
+
+    missing = [name for name in FEATURED_PROJECTS if name not in counts]
+    if missing:
+        raise RuntimeError(f"Featured public repositories were not found: {', '.join(missing)}")
+
+    for name in FEATURED_PROJECTS:
+        count = counts[name]
+        label = f"★ {format_count(count)}"
+        width = max(58, 24 + len(label) * 9)
+        safe_label = escape(f"{name}: {format_count(count)} stars")
+        lines = [
+            f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="24" viewBox="0 0 {width} 24" role="img" aria-label="{safe_label}">',
+            f"<title>{safe_label}</title>",
+            f'<rect x="0.5" y="0.5" width="{width - 1}" height="23" rx="6" fill="{SURFACE}" stroke="{BORDER}"/>',
+            f'<text x="{width / 2:.1f}" y="16" fill="{TEXT}" font-size="12" font-weight="600" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">{escape(label)}</text>',
+            "</svg>",
+            "",
+        ]
+        (badge_dir / f"{name}.svg").write_text("\n".join(lines), encoding="utf-8")
 
 
 def language_totals(user: dict) -> list[tuple[str, int, str]]:
@@ -292,6 +334,7 @@ def main() -> int:
         },
     )
     render_stats(user)
+    render_star_badges(user)
     render_languages(user)
     render_activity(user)
     return 0

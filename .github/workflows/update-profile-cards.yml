@@ -32,12 +32,12 @@ jobs:
 
       - name: Publish changed cards
         run: |
-          if git diff --quiet -- assets/*.svg; then
+          if git diff --quiet -- assets/*.svg assets/stars/*.svg; then
             echo "Profile cards are already current."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/*.svg
+          git add assets/*.svg assets/stars/*.svg
           git commit -m "Update profile statistics"
           git push

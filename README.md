@@ -19,45 +19,52 @@
 <table>
   <tr>
     <td width="50%" valign="top">
+      <a href="https://github.com/XopMC/METAL_CRYPTO_TOOLKIT/stargazers"><img align="right" src="assets/stars/METAL_CRYPTO_TOOLKIT.svg" alt="METAL_CRYPTO_TOOLKIT stars"></a>
       <a href="https://github.com/XopMC/METAL_CRYPTO_TOOLKIT"><strong>METAL_CRYPTO_TOOLKIT</strong></a><br>
       <sub>Metal-accelerated cryptocurrency recovery and key research toolkit for macOS.</sub>
     </td>
     <td width="50%" valign="top">
+      <a href="https://github.com/XopMC/C-Sharp-Mnemonic/stargazers"><img align="right" src="assets/stars/C-Sharp-Mnemonic.svg" alt="C-Sharp-Mnemonic stars"></a>
       <a href="https://github.com/XopMC/C-Sharp-Mnemonic"><strong>C-Sharp-Mnemonic</strong></a><br>
       <sub>Multicurrency BIP39 mnemonic and derivation toolkit for .NET.</sub>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
+      <a href="https://github.com/XopMC/Mnemonic_CPP/stargazers"><img align="right" src="assets/stars/Mnemonic_CPP.svg" alt="Mnemonic_CPP stars"></a>
       <a href="https://github.com/XopMC/Mnemonic_CPP"><strong>Mnemonic_CPP</strong></a><br>
       <sub>Portable C++ toolkit for BIP39 and SLIP mnemonic workflows.</sub>
     </td>
     <td width="50%" valign="top">
+      <a href="https://github.com/XopMC/CUDA_Mnemonic_Recovery/stargazers"><img align="right" src="assets/stars/CUDA_Mnemonic_Recovery.svg" alt="CUDA_Mnemonic_Recovery stars"></a>
       <a href="https://github.com/XopMC/CUDA_Mnemonic_Recovery"><strong>CUDA_Mnemonic_Recovery</strong></a><br>
       <sub>CUDA-accelerated BIP39 recovery with multi-GPU execution.</sub>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
+      <a href="https://github.com/XopMC/XorFilter/stargazers"><img align="right" src="assets/stars/XorFilter.svg" alt="XorFilter stars"></a>
       <a href="https://github.com/XopMC/XorFilter"><strong>XorFilter</strong></a><br>
       <sub>Binary Fuse 4-wise XOR filter builder for large hexadecimal datasets.</sub>
     </td>
     <td width="50%" valign="top">
+      <a href="https://github.com/XopMC/TONc/stargazers"><img align="right" src="assets/stars/TONc.svg" alt="TONc stars"></a>
       <a href="https://github.com/XopMC/TONc"><strong>TONc</strong></a><br>
       <sub>Portable zero-dependency TON address engine in C.</sub>
     </td>
   </tr>
 </table>
 
+> <a href="https://github.com/XopMC/Metal_Mnemonic_Recovery/stargazers"><img align="right" src="assets/stars/Metal_Mnemonic_Recovery.svg" alt="Metal_Mnemonic_Recovery stars"></a>
 > **Specialized project:** [Metal_Mnemonic_Recovery](https://github.com/XopMC/Metal_Mnemonic_Recovery) - focused Metal implementation for BIP39 recovery on macOS.
 
 ## Selected ports & adaptations
 
-| Project | Focus |
-| --- | --- |
-| [keyhunt-win](https://github.com/XopMC/keyhunt-win) | Windows adaptation of keyhunt |
-| [brainflayer-MultiBlooms](https://github.com/XopMC/brainflayer-MultiBlooms) | Extended brainflayer workflow with multiple Bloom filters |
-| [brainflayer-CUDA](https://github.com/XopMC/brainflayer-CUDA) | CUDA adaptation of brainflayer workloads |
+| Project | Focus | Stars |
+| --- | --- | ---: |
+| [keyhunt-win](https://github.com/XopMC/keyhunt-win) | Windows adaptation of keyhunt | [![keyhunt-win stars](assets/stars/keyhunt-win.svg)](https://github.com/XopMC/keyhunt-win/stargazers) |
+| [brainflayer-MultiBlooms](https://github.com/XopMC/brainflayer-MultiBlooms) | Extended brainflayer workflow with multiple Bloom filters | [![brainflayer-MultiBlooms stars](assets/stars/brainflayer-MultiBlooms.svg)](https://github.com/XopMC/brainflayer-MultiBlooms/stargazers) |
+| [brainflayer-CUDA](https://github.com/XopMC/brainflayer-CUDA) | CUDA adaptation of brainflayer workloads | [![brainflayer-CUDA stars](assets/stars/brainflayer-CUDA.svg)](https://github.com/XopMC/brainflayer-CUDA/stargazers) |
 
 ## GitHub activity
 
