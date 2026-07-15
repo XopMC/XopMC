@@ -11,8 +11,8 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <rect x="36.0" y="70" width="168.0" height="116" rx="4" fill="#f34b7d"/>
 <text x="120.0" y="63" fill="#e6edf3" font-size="11" text-anchor="middle" class="mono">39</text>
 <text x="120.0" y="208" fill="#8b949e" font-size="11" text-anchor="middle" class="mono">C++</text>
-<rect x="216.0" y="132" width="168.0" height="54" rx="4" fill="#6866fb"/>
-<text x="300.0" y="125" fill="#e6edf3" font-size="11" text-anchor="middle" class="mono">18</text>
+<rect x="216.0" y="127" width="168.0" height="59" rx="4" fill="#6866fb"/>
+<text x="300.0" y="120" fill="#e6edf3" font-size="11" text-anchor="middle" class="mono">20</text>
 <text x="300.0" y="208" fill="#8b949e" font-size="11" text-anchor="middle" class="mono">Obj-C++</text>
 <rect x="396.0" y="138" width="168.0" height="48" rx="4" fill="#555555"/>
 <text x="480.0" y="131" fill="#e6edf3" font-size="11" text-anchor="middle" class="mono">16</text>
