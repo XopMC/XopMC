@@ -9,16 +9,16 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="746" y="42" fill="#8b949e" font-size="12" text-anchor="end" class="mono">PUBLIC / 12 MONTHS</text>
 <line x1="36" y1="186" x2="744" y2="186" stroke="#30363d"/>
 <rect x="36.0" y="70" width="168.0" height="116" rx="4" fill="#6866fb"/>
-<text x="120.0" y="63" fill="#e6edf3" font-size="11" text-anchor="middle" class="mono">44</text>
+<text x="120.0" y="63" fill="#e6edf3" font-size="11" text-anchor="middle" class="mono">52</text>
 <text x="120.0" y="208" fill="#8b949e" font-size="11" text-anchor="middle" class="mono">Obj-C++</text>
-<rect x="216.0" y="83" width="168.0" height="103" rx="4" fill="#f34b7d"/>
-<text x="300.0" y="76" fill="#e6edf3" font-size="11" text-anchor="middle" class="mono">39</text>
+<rect x="216.0" y="99" width="168.0" height="87" rx="4" fill="#f34b7d"/>
+<text x="300.0" y="92" fill="#e6edf3" font-size="11" text-anchor="middle" class="mono">39</text>
 <text x="300.0" y="208" fill="#8b949e" font-size="11" text-anchor="middle" class="mono">C++</text>
-<rect x="396.0" y="144" width="168.0" height="42" rx="4" fill="#555555"/>
-<text x="480.0" y="137" fill="#e6edf3" font-size="11" text-anchor="middle" class="mono">16</text>
+<rect x="396.0" y="150" width="168.0" height="36" rx="4" fill="#555555"/>
+<text x="480.0" y="143" fill="#e6edf3" font-size="11" text-anchor="middle" class="mono">16</text>
 <text x="480.0" y="208" fill="#8b949e" font-size="11" text-anchor="middle" class="mono">C</text>
-<rect x="576.0" y="157" width="168.0" height="29" rx="4" fill="#3A4E3A"/>
-<text x="660.0" y="150" fill="#e6edf3" font-size="11" text-anchor="middle" class="mono">11</text>
+<rect x="576.0" y="161" width="168.0" height="25" rx="4" fill="#3A4E3A"/>
+<text x="660.0" y="154" fill="#e6edf3" font-size="11" text-anchor="middle" class="mono">11</text>
 <text x="660.0" y="208" fill="#8b949e" font-size="11" text-anchor="middle" class="mono">CUDA</text>
 <text x="390" y="248" fill="#8b949e" font-size="11" text-anchor="middle">Commits grouped by repository primary language</text>
 </svg>
