@@ -15,8 +15,8 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="415" y="128" fill="#e6edf3" font-size="27" font-weight="700">28</text>
 <rect x="34" y="158" width="349" height="70" rx="7" fill="#161b22" stroke="#30363d"/>
 <text x="52" y="185" fill="#8b949e" font-size="12" font-weight="600" class="mono">FOLLOWERS</text>
-<text x="52" y="214" fill="#e6edf3" font-size="27" font-weight="700">174</text>
+<text x="52" y="214" fill="#e6edf3" font-size="27" font-weight="700">175</text>
 <rect x="397" y="158" width="349" height="70" rx="7" fill="#161b22" stroke="#30363d"/>
 <text x="415" y="185" fill="#8b949e" font-size="12" font-weight="600" class="mono">CONTRIBUTIONS</text>
-<text x="415" y="214" fill="#e6edf3" font-size="27" font-weight="700">447</text>
+<text x="415" y="214" fill="#e6edf3" font-size="27" font-weight="700">437</text>
 </svg>
