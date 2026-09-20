@@ -17,8 +17,8 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <rect x="396.0" y="178" width="168.0" height="8" rx="4" fill="#3A4E3A"/>
 <text x="480.0" y="171" fill="#e6edf3" font-size="11" text-anchor="middle" class="mono">11</text>
 <text x="480.0" y="208" fill="#8b949e" font-size="11" text-anchor="middle" class="mono">CUDA</text>
-<rect x="576.0" y="178" width="168.0" height="8" rx="4" fill="#3572A5"/>
-<text x="660.0" y="171" fill="#e6edf3" font-size="11" text-anchor="middle" class="mono">6</text>
-<text x="660.0" y="208" fill="#8b949e" font-size="11" text-anchor="middle" class="mono">Python</text>
+<rect x="576.0" y="178" width="168.0" height="8" rx="4" fill="#F05138"/>
+<text x="660.0" y="171" fill="#e6edf3" font-size="11" text-anchor="middle" class="mono">9</text>
+<text x="660.0" y="208" fill="#8b949e" font-size="11" text-anchor="middle" class="mono">Swift</text>
 <text x="390" y="248" fill="#8b949e" font-size="11" text-anchor="middle">Commits grouped by repository primary language</text>
 </svg>
